@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import Main from './Main'
 import {bindActionCreators} from 'redux'
 import {removePicture} from "../redux/action"
+import {withRouter} from 'react-router'
 
 function mapStateToProps(state) {
   return {
@@ -13,5 +14,5 @@ function mapDispatchToProps(dispatch){
   return bindActionCreators({removePicture}, dispatch);
 }
 
-const App = connect(mapStateToProps, mapDispatchToProps)(Main)
+const App = withRouter(connect(mapStateToProps, mapDispatchToProps)(Main))
 export default App;

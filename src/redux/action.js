@@ -1,9 +1,6 @@
 export function addPicture(id, imageLink, description) {
     return {
-      type: 'ADD_PICTURE',
-      id,
-      imageLink,
-      description
+      type: 'ADD_PICTURE', id, imageLink, description
     }
   }
 

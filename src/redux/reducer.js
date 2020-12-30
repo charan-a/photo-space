@@ -3,6 +3,8 @@ import _posts from "../data/posts"
 const postReducer = function posts(state = _posts,action){
     switch (action.type){
         case 'REMOVE_PICTURE': return [...state.slice(0,action.index), ...state.slice(action.index + 1)]
+        case 'ADD_PICTURE' :
+             return [{"id": action.id, "imageLink": action.imageLink, "description": action.description},...state]
         default: return state
     }
 }
