@@ -11,7 +11,7 @@ class Main extends Component{
           <Route exact path='/' render={() => (
               <div>
                 <Title title={"PhotoSpace"} />
-                <Photospace posts={this.props.posts} />
+                <Photospace {...this.props} />
               </div>
             )}/>
           

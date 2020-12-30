@@ -13,11 +13,7 @@ function Photospace(props) {
               return y.id - x.id
           })
           .map((post, index) => (
-            <Photo
-              key={index}
-              post={post}
-              onRemovePhoto={props.onRemovePhoto}
-            />
+            <Photo key={index} post={post} {...props} index={index} />
           ))}
         </div>
       </div>
@@ -26,8 +22,7 @@ function Photospace(props) {
 }
 
 Photospace.propTypes ={
-    posts: PropTypes.array.isRequired,
-    onRemovePhoto: PropTypes.func.isRequired
+    posts: PropTypes.array.isRequired
 }
 
 export default Photospace
